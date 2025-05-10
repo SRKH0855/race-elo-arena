@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import MainHeader from "@/components/layout/MainHeader";
+import MainFooter from "@/components/layout/MainFooter";
+import HeroSection from "@/components/home/HeroSection";
+import ChampionshipsSection from "@/components/home/ChampionshipsSection";
+import StandingsSection from "@/components/home/StandingsSection";
+import BettingPromoSection from "@/components/home/BettingPromoSection";
+import CommunitySection from "@/components/home/CommunitySection";
 
 const Index = () => {
+  // Set dark mode as default
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <MainHeader />
+      
+      <main className="flex-1 mt-16">
+        <HeroSection />
+        <ChampionshipsSection />
+        <StandingsSection />
+        <BettingPromoSection />
+        <CommunitySection />
+      </main>
+      
+      <MainFooter />
     </div>
   );
 };

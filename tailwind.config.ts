@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // Racing-specific colors
+        racing: {
+          red: "#ea384c",
+          blue: "#1EAEDB",
+          gray: "#8E9196", 
+          orange: "#F97316",
+          yellow: "#EAB308",
+          green: "#10B981",
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +94,41 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-glow': {
+          '0%, 100%': { 
+            opacity: 1,
+            boxShadow: '0 0 0 0 rgba(234, 56, 76, 0)'
+          },
+          '50%': { 
+            opacity: 0.8,
+            boxShadow: '0 0 20px 5px rgba(234, 56, 76, 0.5)'
+          }
+        },
+        'float': {
+          '0%, 100%': { 
+            transform: 'translateY(0)' 
+          },
+          '50%': { 
+            transform: 'translateY(-10px)' 
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+        'float': 'float 5s ease-in-out infinite',
+			},
+      backgroundImage: {
+        'gradient-racing': 'linear-gradient(135deg, #ea384c 0%, #1EAEDB 100%)',
+        'gradient-carbon': 'repeating-linear-gradient(45deg, #111 0, #111 2px, #191919 2px, #191919 6px)',
+      },
+      boxShadow: {
+        'racing': '0 10px 30px -10px rgba(234, 56, 76, 0.3)',
+        'blue-glow': '0 0 20px rgba(30, 174, 219, 0.5)',
+        'red-glow': '0 0 20px rgba(234, 56, 76, 0.5)',
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
