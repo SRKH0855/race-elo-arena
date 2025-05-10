@@ -93,7 +93,7 @@ const events: Event[] = [
     weather: 'Clear, 22°C',
     registerBy: 'May 13, 2025',
     participants: 18,
-    description: 'Round 3 of the Formula Sprint Challenge heads to the technical Circuit de Barcelona-Catalunya. This track will test drivers' ability to maintain tire life while navigating the technical final sector.',
+    description: "Round 3 of the Formula Sprint Challenge heads to the technical Circuit de Barcelona-Catalunya. This track will test drivers' ability to maintain tire life while navigating the technical final sector.",
     registered: false
   },
   {
